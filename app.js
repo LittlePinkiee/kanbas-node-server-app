@@ -6,6 +6,8 @@ import CourseRoutes from "./courses/routes.js";
 import ModuleRoutes from "./modules/routes.js";
 import AssignmentRoutes from './assignments/routes.js';
 import cors from "cors";
+import "dotenv/config";
+
 
 const app = express()
 app.use(express.json());
@@ -21,4 +23,4 @@ Hello(app)
 
 // app.get('/hello', (req, res) => {res.send('Life is good!')})
 // app.get('/', (req, res) => {res.send('Welcome to Full Stack Development!')})
-app.listen(4000)
+app.listen(process.env.PORT || 4000);
