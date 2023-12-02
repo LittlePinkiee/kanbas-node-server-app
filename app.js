@@ -19,7 +19,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: process.env.FRONTEND_URL,
+    origin: 'https://a6--genuine-flan-4bdf67.netlify.app/',
   })
 );
 
