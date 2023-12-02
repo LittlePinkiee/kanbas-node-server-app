@@ -15,13 +15,8 @@ mongoose.connect(CONNECTION_STRING);
 // mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
 
 const app = express();
-app.use(express.json());
-app.use(
-  cors({
-    credentials: true,
-    origin: '*',
-  })
-);
+// app.use(express.json());
+app.use(cors());
 
 const sessionOptions = {
   secret: "any string",
