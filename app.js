@@ -15,11 +15,11 @@ mongoose.connect(CONNECTION_STRING);
 // mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
 
 const app = express();
-// app.use(express.json());
+app.use(express.json());
 app.use(
   cors({
     credentials: true,
-    origin: 'https://a6--genuine-flan-4bdf67.netlify.app/',
+    origin: process.env.FRONTEND_URL,
   })
 );
 
